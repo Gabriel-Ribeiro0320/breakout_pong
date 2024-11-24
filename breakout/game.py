@@ -16,7 +16,7 @@ class Game:
         print("Jogo começando...")
         while self.running:
             self.ball.simulate_movement()
-            print(f"Points: {self.ball.points}, Lifes: {self.ball.current_lifes} \n")
+            print(f"Pontos: {self.ball.points}, Vidas: {self.ball.current_lifes} \n")
 
             if not self.ball.lifes:
                 print("Fim de jogo!")

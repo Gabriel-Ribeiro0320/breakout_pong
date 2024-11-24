@@ -3,7 +3,7 @@ import random
 class Ball:
     def __init__(self):
         print("Criando a bola")
-        self.points = False
+        self.points = 0  # Pontos começam em 0
         self.max_lifes = 3  # Número máximo de vidas
         self.current_lifes = self.max_lifes
         self.lifes = True
@@ -21,7 +21,8 @@ class Ball:
         print(choice)
 
         if choice == "bola quebrou um bloco":
-            self.points = True
+            self.points += 5  # Incrementa os pontos em 5
+            print(f"Pontuação atual: {self.points}")
         elif choice == "bola saiu da tela":
             self.current_lifes -= 1
             print(f"Vidas restantes: {self.current_lifes}")
