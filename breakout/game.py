@@ -25,7 +25,6 @@ class Game:
             # Exibe a quantidade de blocos restantes
             print(f"Blocos restantes: {self.bricks.bricks_left}")
 
-
             # Verifica se todos os blocos foram quebrados
             if self.bricks.bricks_left == 0:
                 print("Parabéns! Você venceu o jogo!")
