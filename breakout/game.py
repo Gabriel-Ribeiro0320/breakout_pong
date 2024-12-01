@@ -18,6 +18,19 @@ class Game:
             self.ball.simulate_movement()
             print(f"Pontos: {self.ball.points}, Vidas: {self.ball.current_lifes} \n")
 
+            # Simula a quebra de bloco
+            if self.ball.last_action == "bola quebrou um bloco":
+                self.bricks.break_brick()
+
+            # Exibe a quantidade de blocos restantes
+            print(f"Blocos restantes: {self.bricks.bricks_left}")
+
+
+            # Verifica se todos os blocos foram quebrados
+            if self.bricks.bricks_left == 0:
+                print("Parabéns! Você venceu o jogo!")
+                self.running = False
+
             if not self.ball.lifes:
                 print("Fim de jogo!")
                 self.running = False
